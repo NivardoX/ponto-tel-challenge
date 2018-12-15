@@ -22,13 +22,12 @@ async def count_all(word, session, urls):
     return results
 
 
-async def complete_count(word, urls, loop):
+async def complete_count(word, urls):
     connector = aiohttp.TCPConnector(limit=100)
     async with aiohttp.ClientSession(connector=connector) as session:
         return await count_all(word, session, urls)
 
 
-def main(word, urls):
-    loop = asyncio.get_event_loop()
-    result = loop.run_until_complete(complete_count(word, urls, loop))
+async def main(word, urls):
+    result = await complete_count(word, urls)
     return dict(zip(urls, result))
