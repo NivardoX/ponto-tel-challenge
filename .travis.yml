@@ -1,11 +1,16 @@
 language: python
 python:
-  - "3.7-dev"
+- 3.7-dev
 
 install:
-  - pip install -r requirements.txt
+- pip install -r requirements.txt
 
 script: pytest
 
-env:
-  - QUART_APP=api:app
+deploy:
+  provider: heroku
+  api_key:
+    secure: 11oPVK+glY5nlcgZiSisV+wLB4mZJqcSEwAIhYe87UXgTkfAc/pykJ5tx0zF4lFUps00eDvWiK9HQoP63dKxPlUTsJWNAdTGIop9ReOUAFeZmUAK+QjbqqQTQIp7NrYRn9cJF7iTYGAKsYmb7dLLfwjAyWBfOm6PQwU6AQsyWVnAt5e+7hDx9lWUKaijFfFH79YrciBpg8NukR9MnAAOnWf/FX9A3tFYlHnN2t1BHcpeQ6VAwvQzKDVCXZR3Xp6ZckphQcrFsktgalRa9wxt8f11ySIJ35us56/V+myPXRJNnZIrm/xyKCe1T4HGZDt7PBlClO6rVj7tOtqGgJ5Nl0xP6vpjUVCyM0nABwrCDJS2fySv/iEzjbNdoYhc0icQy9iBaKYfa3j847JTHDWOkKa1wILAwzIeBaRBTqDDQyOMrpvwFFgkriAd/9VjgBdQSiv2pbv2ZSrpPa9nWZrQ6sVmrWCc8E33L/AOIkMtr0hIt2F5rz+0mkr4h360xnX9YwwmpLm9OJu/AStBYOfBOV0g4WXI/aPwbbNYbuYuTrXQhfOFhYE6Cy9UrJebKtr/wtEps9NVP6iQZq4OUcAx2HEbdMJV0Vu2XS+UaQ34nZ6yNK2IrCSrzZouC+xGAjEsc0pMF0G/6pGBj9UHwl/C7Yfu1qbboFGmo1yspzk8AjI=
+  app: ponto-tel-test
+  on:
+    repo: oliveira-julio/ponto-tel-challenge
