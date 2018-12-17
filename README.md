@@ -2,7 +2,9 @@ Team: Julio Oliveira
 
 # Resumo
 
-Por meio de uma API a aplicação recebe como parâmetros uma palavra e uma lista de urls. Retorna quantas vezes em cada site aquela palavra foi mencionada.
+Por meio de uma API a aplicação recebe como parâmetros uma palavra e uma lista de urls. Retorna quantas vezes em cada site aquela palavra foi mencionada.\
+Endpoint: http://ponto-tel-test.herokuapp.com/ \
+Openapi: http://ponto-tel-test.herokuapp.com/openapi.json
 
 ## Contexto
 
