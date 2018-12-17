@@ -6,6 +6,14 @@ Por meio de uma API a aplicação recebe como parâmetros uma palavra e uma list
 Endpoint: http://ponto-tel-test.herokuapp.com/ \
 Openapi: http://ponto-tel-test.herokuapp.com/openapi.json
 
+Exemplo:
+```bash
+curl --header "Content-Type: application/json" \
+     --request POST \
+     -d '{"word": "the", "urls":["http://github.com", "http://google.com", "http://wiki.c2.com/"]}' \
+     https://ponto-tel-test.herokuapp.com/
+```
+
 ## Contexto
 
 A aplicação não tem fim específico. É  uma ferramenta para outras aplicações utilizarem.\
