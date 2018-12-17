@@ -6,7 +6,9 @@ install:
 - pip install -r requirements.txt
 
 script: pytest
-
+env:
+# in real app, use one redis for test and one to production.
+- REDIS_URL=redis://h:p9f5f369aac90262a41e4e3173a1583cbbe254d9b54507c1062725d2fa6b0900f@ec2-18-213-155-182.compute-1.amazonaws.com:40829
 deploy:
   provider: heroku
   api_key:
